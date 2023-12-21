@@ -1,0 +1,24 @@
+<div style="margin-top: 1%;">
+  <h2>Socios</h2>
+  <button [routerLink]="['/crear']">➕</button> 
+  <table border="1" class="table">
+    <thead style="font-size: xx-large;">
+      <th>Nombre</th>
+      <th>Acciones</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let socio of this.socios">
+        <ng-container *ngIf="socio">
+        <td>
+            {{ socio.nombreSocio }}
+        </td>
+        <td>
+          <button routerLink="['/mostrar', socio.idSocio]">🔍</button> 
+          <button [routerLink]="['/editar', socio.idSocio]">✏️</button> 
+          <button (click)=eliminar(socio.idSocio)>❌</button> 
+        </td>
+      </ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>
