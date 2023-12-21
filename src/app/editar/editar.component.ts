@@ -28,7 +28,7 @@ export class EditarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  cargarSocio() {//mal
+  cargarSocio() {
     let idSocioString = this.route.snapshot.paramMap.get('idSocio');
     if (idSocioString) {
       let idSocio = parseInt(idSocioString);

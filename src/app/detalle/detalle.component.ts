@@ -22,29 +22,32 @@ export class DetalleComponent implements OnInit {
     "emailSocio": ''
   }
 
-  constructor(private socioService: SocioService, private router: Router, private route: ActivatedRoute) {}
+  constructor(private socioService: SocioService, private router: Router, private route: ActivatedRoute) {
+    this.cargarSocio();
+  }
 
   ngOnInit(): void {
-    this.mostrar();
+    //this.mostrar();
   }
 
-
-  fillData() {
-    this.socioService.verTodos().subscribe((data) => this.socios = data);
-  }
-
-  eliminar(id?: number) {
-    if (id) {
-      this.socioService.eliminarSocio(id).subscribe(() => this.fillData());
+  cargarSocio() {
+    let idSocioString = this.route.snapshot.paramMap.get('idSocio');
+    if (idSocioString) {
+      let idSocio = parseInt(idSocioString);
+      if (idSocio) {
+        this.socioService.obtenerSocio(idSocio).subscribe((data: Socio) => {
+          this.socio = data;
+        });
+      }
     }
   }
 
   //No va
-  mostrar(id?: number){
+  /*mostrar(id?: number){
     if (id) {
       this.socioService.obtenerSocio(id).subscribe((data) => this.socio = data);
     }
-  }
+  }*/
 
   /*
   seeDetails(){
@@ -60,4 +63,5 @@ export class DetalleComponent implements OnInit {
       console.log(this.data);
     })
   }*/
+
 }
