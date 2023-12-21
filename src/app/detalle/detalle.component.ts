@@ -27,7 +27,7 @@ export class DetalleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.mostrar();
+    
   }
 
   cargarSocio() {
@@ -42,26 +42,8 @@ export class DetalleComponent implements OnInit {
     }
   }
 
-  //No va
-  /*mostrar(id?: number){
-    if (id) {
-      this.socioService.obtenerSocio(id).subscribe((data) => this.socio = data);
-    }
-  }*/
-
-  /*
-  seeDetails(){
-    this.router.navigate(['detail']);
-  }*/
-
-
-  /*
-  fillData(){
-    this.apiService.getData().subscribe(
-      data => {
-      this.data = data.results;
-      console.log(this.data);
-    })
-  }*/
+  volver(){
+    this.router.navigate(['/socios']);
+  }
 
 }

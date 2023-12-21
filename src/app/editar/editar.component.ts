@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../service/usuario.service';
 import { SocioService } from '../service/socio.service';
@@ -21,7 +21,7 @@ export class EditarComponent implements OnInit {
     "emailSocio": ''
   }
 
-  constructor(private socioService: SocioService, private router: Router, private route: ActivatedRoute) {
+  constructor(private socioService: SocioService, private router: Router, private route: ActivatedRoute, private cdr: ChangeDetectorRef) {
     this.cargarSocio();
   }
 
@@ -41,10 +41,19 @@ export class EditarComponent implements OnInit {
 
   }
 
-  editar(socio: Socio) {
-    this.socioService.editarSocio(socio).subscribe(() => this.router.navigateByUrl("/socios"));
+  editar(): void {
+    this.socioService.editarSocio(this.socio).subscribe(() => {
+      //this.cdr.detectChanges();
+      this.router.navigateByUrl("/socios");
+    });
   }
-
+/*
+  update(): void {
+    this.usersService.updateUser(this.user).subscribe(
+      response => {
+        this.router.navigate(['']);
+      },
+    );*/
 
 
   /*

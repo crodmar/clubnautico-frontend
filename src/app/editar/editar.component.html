@@ -1,6 +1,6 @@
 <h3>Editar socio</h3>
 <div>
-  <form >
+  <form>
     <label>DNI:</label>
     <input type="text" [(ngModel)]="socio.dniSocio" name="dniSocio" value="{{socio.dniSocio}}">
     <label>Nombre:</label>
@@ -13,6 +13,6 @@
 		<input type="number" [(ngModel)]="socio.telefonoSocio" name="telefonoSocio" value="{{socio.telefonoSocio}}">
     <label>Correo electrónico:</label>
 		<input type="email" [(ngModel)]="socio.emailSocio" name="emailSocio" value="{{socio.emailSocio}}">
-    <input type="button" (click)="editar(socio)" value="Enviar">
+    <input type="button" (click)="editar()" value="Enviar">
   </form>
 </div>

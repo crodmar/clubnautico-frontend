@@ -38,18 +38,5 @@ export class SociosComponent implements OnInit {
     }
   }
 
-  /*
-  seeDetails(){
-    this.router.navigate(['detail']);
-  }*/
 
-
-  /*
-  fillData(){
-    this.apiService.getData().subscribe(
-      data => {
-      this.data = data.results;
-      console.log(this.data);
-    })
-  }*/
 }
