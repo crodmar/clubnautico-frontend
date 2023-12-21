@@ -1,18 +1,18 @@
 <h3>Editar socio</h3>
 <div>
   <form >
-    <label>dniSocio</label>
+    <label>DNI:</label>
     <input type="text" [(ngModel)]="socio.dniSocio" name="dniSocio" value="{{socio.dniSocio}}">
-    <label>nombreSocio</label>
+    <label>Nombre:</label>
 		<input type="text" [(ngModel)]="socio.nombreSocio" name="nombreSocio" value="{{socio.nombreSocio}}">
-    <label>apellido1Socio</label>
+    <label>Primer apellido:</label>
 		<input type="text" [(ngModel)]="socio.apellido1Socio" name="apellido1Socio" value="{{socio.apellido1Socio}}">
-    <label>apellido2Socio</label>
+    <label>Segundo apellido:</label>
 		<input type="text" [(ngModel)]="socio.apellido2Socio" name="apellido2Socio" value="{{socio.apellido2Socio}}">
-    <label>telefonoSocio</label>
+    <label>Teléfono:</label>
 		<input type="number" [(ngModel)]="socio.telefonoSocio" name="telefonoSocio" value="{{socio.telefonoSocio}}">
-    <label>emailSocio</label>
+    <label>Correo electrónico:</label>
 		<input type="email" [(ngModel)]="socio.emailSocio" name="emailSocio" value="{{socio.emailSocio}}">
-    <input type="button" (click)="editar()" value="Enviar">
+    <input type="button" (click)="editar(socio)" value="Enviar">
   </form>
 </div>

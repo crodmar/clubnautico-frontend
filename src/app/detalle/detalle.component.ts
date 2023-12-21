@@ -1,23 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { UsuarioService } from '../service/usuario.service';
 import { SocioService } from '../service/socio.service';
 import { Socio } from '../models/socio.model';
 
 @Component({
-  selector: 'app-socios',
-  templateUrl: './socios.component.html',
-  styleUrl: './socios.component.css'
+  selector: 'app-detalle',
+  templateUrl: './detalle.component.html',
+  styleUrl: './detalle.component.css'
 })
-export class SociosComponent implements OnInit {
+export class DetalleComponent implements OnInit {
 
   socios: Socio[] = [];
-  socio?: Socio;
+  socio: Socio = {
+    "dniSocio": '',
+    "nombreSocio": '',
+    "apellido1Socio": '',
+    "apellido2Socio": '',
+    "telefonoSocio":  0,
+    "emailSocio": ''
+  }
 
-  constructor(private socioService: SocioService, private router: Router) {}
+  constructor(private socioService: SocioService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.fillData();
+    this.mostrar();
   }
 
 

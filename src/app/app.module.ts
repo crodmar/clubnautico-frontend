@@ -11,9 +11,10 @@ import { CommonModule } from '@angular/common';
 import { SociosComponent } from './socios/socios.component';
 import { CrearComponent } from './crear/crear.component';
 import { EditarComponent } from './editar/editar.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 const appRoutes: Routes = [
-  {path: '', component:HomeComponent},
+  {path: '', component:HomeComponent}
 ]
 
 @NgModule({
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     HomeComponent,
     SociosComponent,
     CrearComponent,
-    EditarComponent
+    EditarComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

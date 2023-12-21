@@ -31,7 +31,7 @@ export class SocioService {
     if (!token) {
       token = '';
     }
-    return this.http.get<Socio>(this.urlApi + id, {headers: { "Authorization": token}});
+    return this.http.get<Socio>(this.urlApi + "obtener/" + id, {headers: { "Authorization": token}});
   }
 
   public verTodos(): Observable<Socio[]>{
@@ -58,6 +58,12 @@ export class SocioService {
     console.log(socio)
     return this.http.put<Socio>(this.urlApi + "editar/" + socio.idSocio, socio, {headers: { "Authorization": token}});
   }
-
+  /*
+  update(): void {
+    this.usersService.updateUser(this.user).subscribe(
+      response => {
+        this.router.navigate(['']);
+      },
+    );*/
   
 }
