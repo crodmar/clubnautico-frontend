@@ -14,7 +14,7 @@ export class SociosComponent implements OnInit {
   socios: Socio[] = [];
   socio?: Socio;
 
-  constructor(private socioService: SocioService, private router: Router) {}
+  constructor(private socioService: SocioService, private usuarioService: UsuarioService, private router: Router) {}
 
   ngOnInit(): void {
     this.fillData();
@@ -31,11 +31,14 @@ export class SociosComponent implements OnInit {
     }
   }
 
-  //No va
   mostrar(id?: number){
     if (id) {
       this.socioService.obtenerSocio(id).subscribe((data) => this.socio = data);
     }
+  }
+
+  logout() {
+    this.usuarioService.logout();
   }
 
 

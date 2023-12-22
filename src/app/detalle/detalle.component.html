@@ -2,11 +2,12 @@
   <h2>Información del socio</h2>
   <ng-container *ngIf="socio">
     <ul class="list-group">
-      <li class="list-group-item">Nombre: {{ socio.nombreSocio }}</li>
-      <li class="list-group-item">1º apellido: {{ socio.apellido1Socio }}</li>
-      <li class="list-group-item">2º apellido: {{ socio.apellido1Socio }}</li>
-      <li class="list-group-item">Teléfono: {{ socio.telefonoSocio }}</li>
-      <li class="list-group-item">Correo electrónico: {{ socio.emailSocio }}</li>
+      <li class="list-group-item"><b>DNI:</b> {{ socio.dniSocio }}</li>
+      <li class="list-group-item"><b>Nombre:</b> {{ socio.nombreSocio }}</li>
+      <li class="list-group-item"><b>1º apellido:</b> {{ socio.apellido1Socio }}</li>
+      <li class="list-group-item"><b>2º apellido:</b> {{ socio.apellido1Socio }}</li>
+      <li class="list-group-item"><b>Teléfono:</b> {{ socio.telefonoSocio }}</li>
+      <li class="list-group-item"><b>Correo electrónico:</b> {{ socio.emailSocio }}</li>
     </ul>
   </ng-container>
   <button class="btn btn-primary mt-3" (click)="volver()">Volver</button> 
