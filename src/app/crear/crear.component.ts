@@ -29,5 +29,9 @@ export class CrearComponent implements OnInit {
     this.socioService.crearSocio(this.socio).subscribe(() => this.router.navigateByUrl("/socios"));
   }
 
+  volver(){
+    this.router.navigate(['/socios']);
+  }
+
 
 }

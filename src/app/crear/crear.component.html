@@ -1,18 +1,37 @@
-<h3>Crear socio</h3>
-<div>
-  <form >
-    <label>dniSocio</label>
-    <input type="text" [(ngModel)]="socio.dniSocio" name="dniSocio">
-    <label>nombreSocio</label>
-		<input type="text" [(ngModel)]="socio.nombreSocio" name="nombreSocio">
-    <label>apellido1Socio</label>
-		<input type="text" [(ngModel)]="socio.apellido1Socio" name="apellido1Socio">
-    <label>apellido2Socio</label>
-		<input type="text" [(ngModel)]="socio.apellido2Socio" name="apellido2Socio">
-    <label>telefonoSocio</label>
-		<input type="number" [(ngModel)]="socio.telefonoSocio" name="telefonoSocio">
-    <label>emailSocio</label>
-		<input type="email" [(ngModel)]="socio.emailSocio" name="emailSocio">
-    <input type="button" (click)="crear()" value="Enviar">
+<div class="container mt-4">
+  <h3>Crear socio</h3>
+  <form>
+    <div class="form-group">
+      <label for="dniSocio">DNI:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.dniSocio" name="dniSocio" id="dniSocio">
+    </div>
+
+    <div class="form-group">
+      <label for="nombreSocio">Nombre:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.nombreSocio" name="nombreSocio" id="nombreSocio">
+    </div>
+
+    <div class="form-group">
+      <label for="apellido1Socio">Primer apellido:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.apellido1Socio" name="apellido1Socio" id="apellido1Socio">
+    </div>
+
+    <div class="form-group">
+      <label for="apellido2Socio">Segundo apellido:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.apellido2Socio" name="apellido2Socio" id="apellido2Socio">
+    </div>
+
+    <div class="form-group">
+      <label for="telefonoSocio">Teléfono:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.telefonoSocio" name="telefonoSocio" id="telefonoSocio">
+    </div>
+
+    <div class="form-group">
+      <label for="emailSocio">Correo electrónico:</label>
+      <input type="email" class="form-control" [(ngModel)]="socio.emailSocio" name="emailSocio" id="emailSocio">
+    </div>
+
+    <button type="button" class="btn btn-primary mr-2" (click)="crear()">Enviar</button>
+    <button type="button" class="btn btn-primary" (click)="volver()">Volver</button>
   </form>
 </div>

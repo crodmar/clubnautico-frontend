@@ -1,18 +1,37 @@
-<h3>Editar socio</h3>
-<div>
+<div class="container mt-4">
+  <h3>Editar socio</h3>
   <form>
-    <label>DNI:</label>
-    <input type="text" [(ngModel)]="socio.dniSocio" name="dniSocio" value="{{socio.dniSocio}}">
-    <label>Nombre:</label>
-		<input type="text" [(ngModel)]="socio.nombreSocio" name="nombreSocio" value="{{socio.nombreSocio}}">
-    <label>Primer apellido:</label>
-		<input type="text" [(ngModel)]="socio.apellido1Socio" name="apellido1Socio" value="{{socio.apellido1Socio}}">
-    <label>Segundo apellido:</label>
-		<input type="text" [(ngModel)]="socio.apellido2Socio" name="apellido2Socio" value="{{socio.apellido2Socio}}">
-    <label>Teléfono:</label>
-		<input type="number" [(ngModel)]="socio.telefonoSocio" name="telefonoSocio" value="{{socio.telefonoSocio}}">
-    <label>Correo electrónico:</label>
-		<input type="email" [(ngModel)]="socio.emailSocio" name="emailSocio" value="{{socio.emailSocio}}">
-    <input type="button" (click)="editar()" value="Enviar">
+    <div class="form-group">
+      <label for="dniSocio">DNI:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.dniSocio" name="dniSocio" id="dniSocio" value="{{socio.dniSocio}}">
+    </div>
+
+    <div class="form-group">
+      <label for="nombreSocio">Nombre:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.nombreSocio" name="nombreSocio" id="nombreSocio" value="{{socio.nombreSocio}}">
+    </div>
+
+    <div class="form-group">
+      <label for="apellido1Socio">Primer apellido:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.apellido1Socio" name="apellido1Socio" id="apellido1Socio" value="{{socio.apellido1Socio}}">
+    </div>
+
+    <div class="form-group">
+      <label for="apellido2Socio">Segundo apellido:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.apellido2Socio" name="apellido2Socio" id="apellido2Socio" value="{{socio.apellido2Socio}}">
+    </div>
+
+    <div class="form-group">
+      <label for="telefonoSocio">Teléfono:</label>
+      <input type="text" class="form-control" [(ngModel)]="socio.telefonoSocio" name="telefonoSocio" id="telefonoSocio" value="{{socio.telefonoSocio}}">
+    </div>
+
+    <div class="form-group">
+      <label for="emailSocio">Correo electrónico:</label>
+      <input type="email" class="form-control" [(ngModel)]="socio.emailSocio" name="emailSocio" id="emailSocio" value="{{socio.emailSocio}}">
+    </div>
+
+    <button type="button" class="btn btn-primary mr-2" (click)="editar()">Enviar</button>
+    <button type="button" class="btn btn-primary" (click)="volver()">Volver</button>
   </form>
 </div>

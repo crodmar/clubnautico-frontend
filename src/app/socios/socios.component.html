@@ -1,8 +1,10 @@
-<div style="margin-top: 1%;">
-  <h2>Socios</h2>
-  <button [routerLink]="['/crear']">➕</button> 
-  <table border="1" class="table">
-    <thead style="font-size: xx-large;">
+<div class="container mt-4">  
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Socios</h2>
+    <button class="btn btn-outline-success" [routerLink]="['/crear']">➕</button> 
+  </div>  
+  <table class="table table-bordered">
+    <thead class="thead-dark">
       <th>Nombre</th>
       <th>Acciones</th>
     </thead>
@@ -13,9 +15,9 @@
             {{ socio.nombreSocio }} {{ socio.apellido1Socio }} {{ socio.apellido2Socio }} 
         </td>
         <td>
-          <button [routerLink]="['/detalle', socio.idSocio]">🔍</button> 
-          <button [routerLink]="['/editar', socio.idSocio]">✏️</button> 
-          <button (click)="eliminar(socio.idSocio)">❌</button> 
+          <button class="btn btn-outline-info" [routerLink]="['/detalle', socio.idSocio]">🔍</button> 
+          <button class="btn btn-outline-warning" [routerLink]="['/editar', socio.idSocio]">✏️</button> 
+          <button class="btn btn-outline-danger" (click)="eliminar(socio.idSocio)">❌</button> 
         </td>
       </ng-container>
       </tr>

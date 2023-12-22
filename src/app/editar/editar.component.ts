@@ -43,26 +43,12 @@ export class EditarComponent implements OnInit {
 
   editar(): void {
     this.socioService.editarSocio(this.socio).subscribe(() => {
-      //this.cdr.detectChanges();
       this.router.navigateByUrl("/socios");
     });
   }
-/*
-  update(): void {
-    this.usersService.updateUser(this.user).subscribe(
-      response => {
-        this.router.navigate(['']);
-      },
-    );*/
 
-
-  /*
-    updateUser(user: User): Observable<User> {
-        return this.http.put<User>(this.url + "/" + user.id, user);
-    }
- 
-
-  
-  } */
+  volver(){
+    this.router.navigate(['/socios']);
+  }
 
 }

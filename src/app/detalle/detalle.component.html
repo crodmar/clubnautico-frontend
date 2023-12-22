@@ -1,13 +1,13 @@
-<div style="margin-top: 1%;">
+<div class="container mt-4">
   <h2>Información del socio</h2>
   <ng-container *ngIf="socio">
-    <ul>
-      <li>Nombre: {{ socio.nombreSocio }}</li>
-      <li>1º apellido: {{ socio.apellido1Socio }}</li>
-      <li>2º apellido: {{ socio.apellido1Socio }}</li>
-      <li>Teléfono: {{ socio.telefonoSocio }}</li>
-      <li>Correo electrónico: {{ socio.emailSocio }}</li>
+    <ul class="list-group">
+      <li class="list-group-item">Nombre: {{ socio.nombreSocio }}</li>
+      <li class="list-group-item">1º apellido: {{ socio.apellido1Socio }}</li>
+      <li class="list-group-item">2º apellido: {{ socio.apellido1Socio }}</li>
+      <li class="list-group-item">Teléfono: {{ socio.telefonoSocio }}</li>
+      <li class="list-group-item">Correo electrónico: {{ socio.emailSocio }}</li>
     </ul>
   </ng-container>
-  <button (click)="volver()">Volver</button> 
+  <button class="btn btn-primary mt-3" (click)="volver()">Volver</button> 
 </div>
